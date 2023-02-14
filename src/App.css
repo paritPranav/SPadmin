@@ -1,0 +1,51 @@
+
+.postbtn{
+  display: inline-block;
+}
+.pagination{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 85%;
+  text-align: center;
+}
+.paginationPrev{
+  margin-left: 30%;
+}
+.paginationNext{
+  margin-Right: 30%;
+}
+@media (max-width:600px) {
+  .postimg{
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width:400px) {
+  .postTile{
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+   .postcard p{
+    font-size: 0.8rem;
+  }
+}
+@media (max-width:360px) {
+  .postimg{
+    width: 80px;
+    height: 80px;
+  }
+}
+.backbutton{
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border: none;
+
+}
+.sharebutton{
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  float: right;  
+  border:none 
+}
