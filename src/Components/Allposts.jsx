@@ -8,7 +8,6 @@ import {useNavigate} from 'react-router-dom';
 
 export default function Allposts() {
 
-    console.log(process.env)
   const navigate=useNavigate()
   const [start,setstart]=useState(false);
   const [end,setend]=useState(false)
