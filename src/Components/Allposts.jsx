@@ -6,7 +6,7 @@ import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
 export default function Allposts() {
-
+console.log(process.env.REACT_APP_API_URL)
   const navigate=useNavigate()
   const [start,setstart]=useState(false);
   const [end,setend]=useState(false)
@@ -14,8 +14,8 @@ export default function Allposts() {
   const [page,setpage]= useState(1);
 const [posts,setposts] = useState([]);
 const [isposts,setisposts]=useState(false);
-const BaseURL= "http://18.207.234.93:3000/posts"
-const BaseURL3= "http://18.207.234.93:3000/posts/getlength"
+const BaseURL= process.env.REACT_APP_API_URL+"/posts"
+const BaseURL3= process.env.REACT_APP_API_URL+"/posts/getlength"
 
 
 

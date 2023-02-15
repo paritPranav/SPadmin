@@ -13,7 +13,7 @@ export default function PostCard(post) {
     const deletepost =()=>{
         if(localStorage.getItem('authtoken')!=null){
             console.log(id);
-            const BaseURL="http://18.207.234.93:3000/posts/delete";
+            const BaseURL=process.env.REACT_APP_API_URL+"/posts/delete";
             axios.delete(BaseURL,{
                   data:{postid:id},
                   headers:{

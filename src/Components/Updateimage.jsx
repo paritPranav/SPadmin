@@ -17,8 +17,8 @@ export default function Updateimage() {
     const [preview,setpreview]=useState('');
 
             
-    const BaseURL="http://18.207.234.93:3000/posts/post";
-    const BaseURL2="http://18.207.234.93:3000/posts/updateimage";
+    const BaseURL=process.env.REACT_APP_API_URL+"/posts/post";
+    const BaseURL2=process.env.REACT_APP_API_URL+"/posts/updateimage";
 
         const onupload=(e)=>{
             setpreview(URL.createObjectURL(e.target.files[0]));

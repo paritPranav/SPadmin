@@ -13,7 +13,7 @@ export default function Fullpost() {
     let navigate= useNavigate();  
 
 
-    const posturl="http://18.207.234.93:3000/posts/post"
+    const posturl=process.env.REACT_APP_API_URL+"/posts/post"
     const[post,setpost]= useState([]);
 
     const fetchPost=()=>{
