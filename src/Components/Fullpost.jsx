@@ -13,7 +13,7 @@ export default function Fullpost() {
     let navigate= useNavigate();  
 
 
-    const posturl="http://localhost:3000/posts/post"
+    const posturl="http://18.207.234.93:3000/posts/post"
     const[post,setpost]= useState([]);
 
     const fetchPost=()=>{

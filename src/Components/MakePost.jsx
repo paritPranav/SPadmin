@@ -28,7 +28,7 @@ export default function MakePost() {
   
   const makePost=()=>{
      if(localStorage.getItem('authtoken')!=null){
-      const BaseURL="http://localhost:3000/posts/createPost";
+      const BaseURL="http://18.207.234.93:3000/createPost";
       axios.post(BaseURL,{
         
         title:Title,

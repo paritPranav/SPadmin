@@ -5,8 +5,10 @@ import {AiFillRightCircle,AiFillLeftCircle} from 'react-icons/ai'
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
+
 export default function Allposts() {
 
+    console.log(process.env)
   const navigate=useNavigate()
   const [start,setstart]=useState(false);
   const [end,setend]=useState(false)
@@ -14,8 +16,8 @@ export default function Allposts() {
   const [page,setpage]= useState(1);
 const [posts,setposts] = useState([]);
 const [isposts,setisposts]=useState(false);
-const BaseURL="http://localhost:3000/posts"
-const BaseURL3="http://localhost:3000/posts/getlength"
+const BaseURL= "http://18.207.234.93:3000/posts"
+const BaseURL3= "http://18.207.234.93:3000/posts/getlength"
 
 
 

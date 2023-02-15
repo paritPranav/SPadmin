@@ -18,8 +18,8 @@ export default function UpdatePost() {
     const [keywords,setkeywords]=useState('');
 
     
-    const BaseURL="http://localhost:3000/posts/post";
-    const BaseURL2="http://localhost:3000/posts/updatepost";
+    const BaseURL="http://18.207.234.93:3000/posts/post";
+    const BaseURL2="http://18.207.234.93:3000/posts/updatepost";
 
 
 
