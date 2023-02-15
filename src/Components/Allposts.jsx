@@ -5,7 +5,6 @@ import {AiFillRightCircle,AiFillLeftCircle} from 'react-icons/ai'
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
-
 export default function Allposts() {
 
   const navigate=useNavigate()
