@@ -49,3 +49,26 @@
   float: right;  
   border:none 
 }
+.menubtn{
+
+   margin: 30px;
+
+}
+.menubtn svg{
+  width: 50px;
+  height: 50px;
+  color: rgb(119, 119, 119);
+}
+.advertisecard{
+
+    border: 1px solid rgb(195, 195, 195);
+    border-radius: 20px;
+    margin: 5%;
+    text-align: center;
+
+}
+.advertisecard img{
+  width: 80vw;
+  /* height: 400px; */
+  margin: 5%;
+}

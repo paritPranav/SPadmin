@@ -40,7 +40,9 @@ export default function UpdatePost() {
   }).then((res)=>{
     if(res.status==200){
       navigate("/")
-    }
+    }else{
+      navigate('/signin')
+     }
 })
  }
  const fetchdata=()=>{

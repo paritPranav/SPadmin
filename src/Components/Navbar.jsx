@@ -30,7 +30,7 @@ export default function Navbar() {
     </a>
     <a className="navbar-brand"  onClick={changeRoutetoMakePost}>
    
-         <span style={{color:"White"}}>+</span>
+         {/* <span style={{color:"White"}}>+</span> */}
     </a>
   </div>
 </nav>

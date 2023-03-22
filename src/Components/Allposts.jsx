@@ -4,6 +4,7 @@ import {AiFillRightCircle,AiFillLeftCircle} from 'react-icons/ai'
 
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
+import MenuComponent from './MenuComponent';
 
 export default function Allposts() {
 console.log(process.env.REACT_APP_API_URL)
@@ -64,6 +65,7 @@ const fetchData=()=>{
    let allposts = res.data;
    setposts(allposts)
    setisposts(true);
+   window.scroll({top:0})
       
   })
 
@@ -91,9 +93,6 @@ const fetchlength=()=>{
    },[page]);
 
 
- useEffect(()=>{
-  checkpage();
-},[maxpage])
 
 
 const btnstyle={
@@ -104,6 +103,8 @@ const btnstyle={
 
   return (
     <div>
+          <MenuComponent/>
+
         {
           posts.map((onePost)=>{
         

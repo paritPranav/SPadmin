@@ -11,24 +11,28 @@ export default function PostCard(post) {
     let navigate= useNavigate();  
    
     const deletepost =()=>{
-        if(localStorage.getItem('authtoken')!=null){
-            console.log(id);
-            const BaseURL=process.env.REACT_APP_API_URL+"/posts/delete";
-            axios.delete(BaseURL,{
-                  data:{postid:id},
-                  headers:{
-                    'authtoken':localStorage.getItem('authtoken')
-                  }   
-            }).then((res)=>{
+        if(window.confirm("Do you Want to delete?")){
+            if(localStorage.getItem('authtoken')!=null){
+                console.log(id);
+                const BaseURL=process.env.REACT_APP_API_URL+"/posts/delete";
+                axios.delete(BaseURL,{
+                      data:{postid:id},
+                      headers:{
+                        'authtoken':localStorage.getItem('authtoken')
+                      }   
+                }).then((res)=>{
+            
+                    navigate("/success/Deleted Post")
+                   
         
-                navigate("/delsuccess")
-               
-    
-            }).catch((err)=>{
-                console.log(err);
-            })
+                }).catch((err)=>{
+                    console.log(err);
+                })
+            }
+           
         }
-       
+
+        
     }
 
 

@@ -52,7 +52,9 @@ export default function MakePost() {
       }).then((res)=>{
           if(res.status===200){
             navigate("/")
-          }
+          }else{
+            navigate('/signin')
+           }
       })
   
        }else{

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
-import { useNavigate ,useParams} from 'react-router-dom';
+import { useNavigate ,useParams,Navigate} from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
 import { useEffect } from 'react';
@@ -37,7 +37,9 @@ export default function Updateimage() {
                 }).then((res)=>{
                     if(res.status==200){
                       navigate("/")
-                    }
+                    }else{
+                        navigate('/signin')
+                       }
                 })
 
         }
