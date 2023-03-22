@@ -25,12 +25,12 @@ export default function AddAdvertise() {
     if(image!=''){
 
    
-    axios.get("process.env.REACT_APP_API_URL/advertise/")
+    axios.get(process.env.REACT_APP_API_URL+"/advertise/")
     .then((res)=>{
       let size=res.data.length;
       if(size<3){
         if(localStorage.getItem('authtoken')!=null){
-          const BaseUrl="process.env.REACT_APP_API_URL/advertise/addadvertise";
+          const BaseUrl=process.env.REACT_APP_API_URL+"/advertise/addadvertise";
           axios.post(BaseUrl,{
               image:image
           },{
