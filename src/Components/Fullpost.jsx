@@ -16,7 +16,7 @@ export default function Fullpost() {
     
 
     const posturl=process.env.REACT_APP_API_URL+"/posts/post";
-    const updateid="http://localhost:3000/posts/updateId"
+    const updateid="process.env.REACT_APP_API_URL/posts/updateId"
     const[post,setpost]= useState([]);
 
     const fetchPost=()=>{

@@ -2,14 +2,16 @@ import axios from 'axios';
 import React from 'react'
 import { useState,useEffect } from 'react';
 import CurrentAdvertisements from './CurrentAdvertisements';
-import { Navigate } from 'react-router-dom';
+import { Navigate,useNavigate } from 'react-router-dom';
 
 export default function AddAdvertise() {
     const [image, setImage]=useState('');
     const [preview,setpreview]=useState('');
     const [newPosts, setNewPosts]=useState([]);
     const [adsize,setadsize]=useState('');
-    const navigate=new Navigate();
+
+    let navigate=useNavigate();
+
   const uploadImage=async (e)=>{
     const file= e.target.files[0];
     setpreview(URL.createObjectURL(file))
@@ -20,12 +22,15 @@ export default function AddAdvertise() {
 
 
    const makePost=async()=>{
-    axios.get("http://localhost:3000/advertise/")
+    if(image!=''){
+
+   
+    axios.get("process.env.REACT_APP_API_URL/advertise/")
     .then((res)=>{
       let size=res.data.length;
       if(size<3){
         if(localStorage.getItem('authtoken')!=null){
-          const BaseUrl="http://localhost:3000/advertise/addadvertise";
+          const BaseUrl="process.env.REACT_APP_API_URL/advertise/addadvertise";
           axios.post(BaseUrl,{
               image:image
           },{
@@ -39,7 +44,7 @@ export default function AddAdvertise() {
               alert("Uploaded")
             
             setNewPosts([res.data, ...newPosts]);
-              // setNewPosts([]);
+             
               setImage('')
               setpreview('')
               document.getElementById('upload').value = '';
@@ -63,6 +68,9 @@ export default function AddAdvertise() {
      
         
     })
+  }else{
+    alert("Please select the image")
+  }
   }
 
 

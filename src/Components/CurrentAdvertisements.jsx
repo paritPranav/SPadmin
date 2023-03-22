@@ -7,7 +7,7 @@ export default function CurrentAdvertisements(props) {
     const[advertises,setadvertise]=useState([]);
 
     const getadvertises=()=>{
-            axios.get("http://localhost:3000/advertise/")
+            axios.get("process.env.REACT_APP_API_URL/advertise/")
             .then((res)=>{
                 setadvertise(res.data);
                 console.log(advertises);

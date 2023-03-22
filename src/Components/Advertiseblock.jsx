@@ -7,7 +7,7 @@ export default function Advertiseblock(props) {
     const deleteadvertise= async()=>{
 
 
-      axios.delete("http://localhost:3000/advertise/deleteAdvertise",{
+      axios.delete("process.env.REACT_APP_API_URL/advertise/deleteAdvertise",{
         
           data:{id},
           headers:{
