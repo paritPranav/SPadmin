@@ -16,7 +16,7 @@ export default function Fullpost() {
     
 
     const posturl=process.env.REACT_APP_API_URL+"/posts/post";
-    const updateid="process.env.REACT_APP_API_URL/posts/updateId"
+    const updateid=process.env.REACT_APP_API_URL+"/posts/updateId"
     const[post,setpost]= useState([]);
 
     const fetchPost=()=>{
@@ -29,16 +29,15 @@ export default function Fullpost() {
 
     }
     const onupdateclick=()=>{
-        axios.post(updateid,{
-           data:{
+        axios.post(updateid,
+           {
                 oldId:oldid,
                 newId:id
-            },
-                headers:{
-                    'authtoken':localStorage.getItem('authtoken'),
-                    'Content-Type':'multipart/form-data'
-                
-            }
+            },{
+            headers:{
+                'authtoken':localStorage.getItem('authtoken')
+              }   
+            
         }).then((res)=>{
             if(res.status==200){
                 navigate("/success/Id Updated");
