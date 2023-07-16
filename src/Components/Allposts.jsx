@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PostCard from './PostCard';
-import {AiFillRightCircle,AiFillLeftCircle} from 'react-icons/ai'
-
+import {AiFillRightCircle,AiFillLeftCircle} from 'react-icons/ai';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 import MenuComponent from './MenuComponent';
@@ -80,7 +79,7 @@ const fetchlength=()=>{
 
   useEffect(()=>{
 
-    fetchlength();
+    fetchlength(); 
      visiblestart();
      visiblend();
      if(localStorage.getItem('authtoken')!=null){
@@ -103,7 +102,7 @@ const btnstyle={
 
   return (
     <div>
-          <MenuComponent/>
+          {/* <MenuComponent/> */}
 
         {
           posts.map((onePost)=>{

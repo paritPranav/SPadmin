@@ -1,4 +1,14 @@
 
+.navbar{
+  background-color: rgb(79, 148, 251);
+  font-size: 20px;
+}
+hr{
+  color: white;
+}
+.navbar-toggler:focus{
+  box-shadow:0 0 0 0;
+}
 .postbtn{
   display: inline-block;
 }

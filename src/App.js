@@ -10,6 +10,9 @@ import Fullpost from './Components/Fullpost';
 import Delsuccess from './Components/Success';
 import Updateimage from './Components/Updateimage';
 import AddAdvertise from './Components/AddAdvertise';
+import AllBills from './Components/AllBills';
+import BillDetails from './Components/BillDetails';
+
 function App() {
   return (
     <div className="App">
@@ -26,6 +29,9 @@ function App() {
             <Route path='/success/:text'  element={<Delsuccess/>}></Route>
             <Route path='/updateimage/:id'  element={<Updateimage/>}></Route>
             <Route path='/advertise'  element={<AddAdvertise/>}></Route>
+            <Route path='/managebills' element={<AllBills/>}></Route>
+            <Route  path='/BillDetails/:id' element={<BillDetails/>}></Route>
+
 
           </Routes>
       </Router>

@@ -55,10 +55,12 @@ export default function MakePost() {
           }else{
             navigate('/signin')
            }
+      }).catch((err)=>{
+        navigate("/signin");
       })
   
        }else{
-        navigate('/signin')
+        navigate("/signin");
        }
     }
 
