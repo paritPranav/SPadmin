@@ -20,7 +20,7 @@ export default function MakePost() {
   const uploadImage=async (e)=>{
     const file= e.target.files[0];
     setpreview(URL.createObjectURL(file))
-
+    console.log(file)
     setImage(file);
     console.log(image)
   }
